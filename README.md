@@ -4,7 +4,7 @@
 
 Typical usage of HANA is in-memory database and it uses HSR (HANA System Replication) for replication.
 ECX is combined with HSR to automate the node promotion from secondary to primary in case of HANA failover.
-There is no certification by SAP for supporting HANA and HSR. However, ECX and other failover HA cluster products are descrived in the below document ( P.250 - 252 and around) as a complement product for HSR failover automation.
+There is no certification by SAP for supporting HANA and HSR. However, ECX and other failover HA cluster products are described in the below document ( P.250 - 252 and around) as a complement product for HSR failover automation.
 
 https://www.sap.com/documents/2017/02/d4cbb865-a67c-0010-82c7-eda71af511fa.html
 
@@ -16,7 +16,7 @@ Unfortunately there have been no experience for the combination of HANA and ECX 
 Typical use of HANA is in-memory, so, a COMMIT can complete in-memory before in-disk.
 This means ECX cannot replicate the COMMITted data, because ECX acknowledges the data which come from file-system, and this leads inconsistency in case of crash of primary HANA.
 
-From consistency viewpoint, protection for im-memory database by ECX needs some extent of care.
+From consistency viewpoint, protection for in-memory database by ECX needs some extent of care.
 
 ----
 
